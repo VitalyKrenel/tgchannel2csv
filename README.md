@@ -13,11 +13,11 @@ Final results contains:
 
 1. Open https://tg2csv.vitaly-krenel.workers.dev/<channel name without @> e.g. https://tg2csv.vitaly-krenel.workers.dev/krenels
 2. Wait up to 25 sec
-3. Get the posts download
+3. CSV file should automatically start downloading after that
 
 Right now I use free Cloudflare Worker, so it fetches up to 400-1000 posts. After testing, it seems that the number of posts depends on the size each post.
 
-## Motivation
+## ❤️‍🔥 Motivation
 
 I'm developing my own Telegram channel t.me/krenels for a couple of years. 
 
@@ -38,15 +38,19 @@ It might not be optimal - maybe theres better tools for doing that. I researched
 
 Telegram Desktop has export, but it doesn't produce CSV AND occasionally it requires you to wait for security reasons up to 24 hours. 
 
-In case you have chat exported already, you would rather use 
+## Alternatives
+1. In case you already have a chat exported in HTML format - you could use [telegram export converter](https://github.com/gabekanegae/telegram-export-converter). Didn't try myself, but it seems a good option if you have whole lot of posts.
 
-## How it works?
+2. In case you have `apiId` and `apiHash` - you could use [telegram channel downloader](https://github.com/abhishekjnvk/telegram-channel-downloader). Didn't try myself - for some reason when I needed to do it, my.telegram.org/apps decided not to issue apiId and hash for me 🙂
+
+## ❓How it works?
 
 Review the src to see the script. It's a basic parser that relies on t.me/s/ fetching posts using `?before=` query. 
-I've deployed the original to Cloudflare Workers using Wrangler.
-No UI as I didn't have much time.
+I've deployed the original to Cloudflare Workers using Wrangler. No UI as I didn't have much time.
 
-## Potential ideas to develop the project
+## 🗺️ Potential ideas to develop the project
+*If you want to have fan or maybe I come back here in the future.*
+
 - [ ] Add ways to chat with ChatGPT immediately  
 - [ ] Make text of the post more readable
 - [ ] Classify posts into topics or build a graph of topics
@@ -54,4 +58,4 @@ No UI as I didn't have much time.
 - [ ] Get potential good follow-ups on the old posts
 
 ## Author
-https://t.me/krenels
+You can find me https://t.me/krenels. I write mostly in Russian, but you could use translate to read my posts 😉
